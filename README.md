@@ -13,13 +13,17 @@ POSTGRES_PRISMA_URL="postgres://default:{{password}}@{{host}}/{{databaseName}}?p
 yarn install
 ```
 
-First, run the development server:
-
 ```bash
 yarn dev
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+To setup and run playwright
+```bash
+yarn test:e2e:install // This only needs to be run once
+yarn test:e2e:ui
+// or
+yarn test:e2e
+```
 
 ## Database Migrations
 
@@ -55,7 +59,7 @@ For more information on Prisma migrations, visit the [Prisma documentation](http
 ## Notes:
 - Tech Stack
     - Next.js for frontend and API
-    - Cypress for e2e and api tests
+    - Playwright for e2e and api tests
     - Tailwind CSS for styling
     - Tailwind UI components for UX
     - Eslint for linting
@@ -66,13 +70,23 @@ For more information on Prisma migrations, visit the [Prisma documentation](http
 ## TODO
 - [x] Initialize repo + deployment to vercel
 - [x] Setup postgres db and connection
-- [ ] Setup cypress e2e + api tests
-- [ ] Design initial schema
-- [ ] Design intial UX
+- [x] Setup Playwright e2e + api tests
+- [x] Design initial schema
+- [ ] Design intial UX and APIs needed
+- [ ] Implement view Books display
+- [ ] Implement view Book display
+- [ ] Implement adding a book 
+   - Validate book name and author aren't empty, and don't already exist.
+- [ ] Implement adding review/rating
+   - Ensure a user can only review a book once
+   - Validate that the review text is not empty and the rating is between 1 and 5
+- [ ] Ensure readme is updated
+- [ ] Record loom and send off
 
 ## Out of scope
 - [x] Add custom domain
 - [x] Setup git hooks
+- [x] Local development Postgres SQL server setup (dockerized)
 - [x] User Authentication (will just mock anything representing a user for now)
 - [x] Logging/Alerting on errors (easy to setup in Vercel, or other cloud providers)
 - [x] User analytics, etc. PostHog, Google Analytics
@@ -100,7 +114,8 @@ Create a small web application with the following components:
 
 - Validate that the review text is not empty and the rating is between 1 and 5
 - Ensure a user can only review a book once
-- Architecture Requirements:
+
+### Architecture Requirements:
 - Implement error handling and display user-friendly error messages
 - Ensure type safety across the stack using TypeScript
 
