@@ -1,0 +1,27 @@
+generator client {
+    provider = "prisma-client-js"
+}
+
+datasource db {
+    provider = "postgresql"
+    url      = env("POSTGRES_PRISMA_URL")
+}
+
+model Book {
+    id      Int      @id @default(autoincrement())
+    title   String
+    author  String // Note: Could be migrated to a seperate model in the future.
+    reviews Review[]
+}
+
+model Review {
+    id        Int      @id @default(autoincrement())
+    text      String
+    rating    Int
+    book      Book     @relation(fields: [bookId], references: [id])
+    bookId    Int
+    userId    String
+    createdAt DateTime @default(now())
+
+    @@unique([bookId, userId]) // Note: Ensure a user can only review a book once
+}
