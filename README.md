@@ -23,7 +23,7 @@ Open [http://localhost:3000](http://localhost:3000) with your browser to see the
 
 ## Database Migrations
 
-This project uses Prisma for database management. To manage your database schema and run migrations, follow these steps:
+This project uses Prisma for database management.
 
 1. Make changes to your database schema in the `prisma/schema.prisma` file.
 
@@ -45,6 +45,11 @@ This project uses Prisma for database management. To manage your database schema
    npx prisma generate
    ```
 
+6. For local development run the seed script to add some demo data.
+   ```
+   yarn seed
+   ```
+
 For more information on Prisma migrations, visit the [Prisma documentation](https://www.prisma.io/docs/concepts/components/prisma-migrate).
 
 ## Notes:
@@ -60,7 +65,7 @@ For more information on Prisma migrations, visit the [Prisma documentation](http
 
 ## TODO
 - [x] Initialize repo + deployment to vercel
-- [ ] Setup postgres db and connection
+- [x] Setup postgres db and connection
 - [ ] Setup cypress e2e + api tests
 - [ ] Design initial schema
 - [ ] Design intial UX
