@@ -1,4 +1,5 @@
 # Book review
+[Live deployment on Vercel](https://book-review-sage.vercel.app)
 
 ## Initial specification
 Create a small web application with the following components:
@@ -58,10 +59,17 @@ To learn more about Next.js, take a look at the following resources:
 You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js/) - your feedback and contributions are welcome!
 
 ## TODO
-- [ ] Initialize repo + deployment to vercel
-- [ ] Setup git hooks
-- [ ] Add custom domain
+- [x] Initialize repo + deployment to vercel
 - [ ] Setup postgres db and connection
 - [ ] Setup cypress e2e + api tests
 - [ ] Design initial schema
 - [ ] Design intial UX
+
+## Out of scope
+- [x] Add custom domain
+- [x] Setup git hooks
+- [x] User Authentication (will just mock anything representing a user for now)
+- [x] Logging/Alerting on errors (easy to setup in Vercel, or other cloud providers)
+- [x] User analytics, etc. PostHog, Google Analytics
+- [x] Multiple environment setup and infrastructure as code (etc. Terraform)
+- [x] CI/CD running tests, validation
