@@ -56,3 +56,12 @@ To learn more about Next.js, take a look at the following resources:
 - [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
 
 You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js/) - your feedback and contributions are welcome!
+
+## TODO
+- [ ] Initialize repo + deployment to vercel
+- [ ] Setup git hooks
+- [ ] Add custom domain
+- [ ] Setup postgres db and connection
+- [ ] Setup cypress e2e + api tests
+- [ ] Design initial schema
+- [ ] Design intial UX
