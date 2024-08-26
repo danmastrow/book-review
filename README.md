@@ -92,6 +92,7 @@ For more information on Prisma migrations, visit the [Prisma documentation](http
 - [x] User analytics, etc. PostHog, Google Analytics
 - [x] Multiple environment setup and infrastructure as code (etc. Terraform)
 - [x] CI/CD running tests, validation
+- [x] Favicons, branding etc
 
 
 ## Initial specification
