@@ -85,7 +85,7 @@ For more information on Prisma migrations, visit the [Prisma documentation](http
 - [x] Setup unit testing
 - [x] Error handling when serverside data fails to load
 - [x] E2E test for homepage with books
-- [ ] Implement view Book display with reviews visible
+- [x] Implement view Book display with reviews visible
 - [ ] Implement adding a book 
    - Validate book name and author aren't empty, and don't already exist.
    - Return user friendly error messages
@@ -107,6 +107,8 @@ For more information on Prisma migrations, visit the [Prisma documentation](http
 - [x] CI/CD running tests, validation
 - [x] Favicons, branding etc.
 - [x] Book API data, etc. Google books, or book images.
+- [x] Pagination or search, currently restricted to displaying 10 latest books.
+- [x] Adding a book slug for the url, instead of just /{id}
 
 
 ## Initial specification

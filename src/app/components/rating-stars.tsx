@@ -15,7 +15,10 @@ const RatingStars: React.FC<RatingStarsProps> = ({
   const emptyStars = totalStars - filledStars;
 
   return (
-    <dd className="flex items-center gap-x-1" data-testid="rating-stars">
+    <dd
+      className="flex items-center justify-center gap-x-1"
+      data-testid="rating-stars"
+    >
       {[...Array(filledStars)].map((_, i) => (
         <StarIcon
           key={`filled-${i}`}

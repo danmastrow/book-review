@@ -1,6 +1,7 @@
 import React from "react";
 import { PhotoIcon, ChevronRightIcon } from "@heroicons/react/24/solid";
 import RatingStars from "./rating-stars";
+import Link from "next/link";
 
 export interface BookReview {
   id: number;
@@ -20,21 +21,23 @@ const BookPreview: React.FC<BookPreviewProps> = ({ book }) => {
 
   return (
     <li
-      className="col-span-1 flex w-56 cursor-pointer flex-col divide-y divide-gray-200 rounded border bg-white text-center shadow-sm transition-all duration-200 hover:scale-110 hover:drop-shadow-lg lg:-mx-12 lg:shadow-none"
+      className="col-span-1 flex w-56 flex-col divide-y divide-gray-200 rounded border bg-white text-center shadow-sm transition-all duration-200 hover:scale-110 hover:drop-shadow-lg lg:-mx-12 lg:shadow-none"
       data-testid="book-preview"
     >
       <div className="flex flex-1 flex-col gap-y-0 p-8">
         <PhotoIcon className="mx-auto my-2 size-32 text-gray-200" />
-        <h3 className="my-1 line-clamp-1 overflow-hidden text-sm font-medium text-gray-900">
+        <h3
+          className="my-1 line-clamp-1 overflow-hidden text-sm font-medium text-gray-900"
+          data-testid="book-title"
+        >
           {book.title}
         </h3>
         <dl className="flex grow flex-col justify-between gap-y-2">
           <dt className="sr-only">Title</dt>
           <dd className="line-clamp-1 overflow-hidden text-sm text-gray-500">
-            By {book.author}
+            By <span data-testid="book-author">{book.author}</span>
           </dd>
           <dt className="sr-only">Author</dt>
-
           <dd>
             <span className="rounded-full bg-yellow-100 px-2 py-1 text-xs font-medium text-black">
               {book.reviews.length} review{book.reviews.length === 1 ? "" : "s"}
@@ -46,10 +49,14 @@ const BookPreview: React.FC<BookPreviewProps> = ({ book }) => {
         </dl>
       </div>
       <div>
-        <div className="flex items-center justify-center gap-0 rounded-bl-lg border border-transparent py-4 text-sm font-semibold text-gray-900">
+        <Link
+          className="flex cursor-pointer items-center justify-center gap-0 rounded-bl-lg border border-transparent py-4 text-sm font-semibold text-gray-900
+          underline-offset-2 hover:underline"
+          href={`/books/${book.id}`}
+        >
           View details
           <ChevronRightIcon aria-hidden="true" className="size-5 text-black" />
-        </div>
+        </Link>
       </div>
     </li>
   );

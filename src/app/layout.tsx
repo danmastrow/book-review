@@ -6,7 +6,7 @@ import Header from "./components/header";
 const inter = Inter({ subsets: ["latin"] });
 
 export const metadata: Metadata = {
-  title: "Book review",
+  title: "Book Review",
   description: "A place to submit, review and discuss books!",
 };
 

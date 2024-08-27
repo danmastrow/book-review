@@ -1,15 +1,14 @@
 import { test, expect } from '@playwright/test';
 
-test('Home page loads and displays books correctly', async ({ page }) => {
-  // Use the BASE_URL from environment variables
-  const baseUrl = process.env.BASE_URL
 
+test('Home page loads and displays books correctly', async ({ page }) => {
+  const baseUrl = process.env.BASE_URL
   if (!baseUrl) {
     throw new Error('BASE_URL environment variable is not set');
   }
 
   await page.goto(baseUrl);
-  await expect(page).toHaveTitle(/Book review/);
+  await expect(page).toHaveTitle(/Book Review/);
   await expect(page.locator('h1').filter({ hasText: 'Latest books' })).toBeVisible();
   await expect(page.locator('h2').filter({ hasText: 'Discover the latest books' })).toBeVisible();
 
