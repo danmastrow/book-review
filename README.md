@@ -5,7 +5,7 @@
 
 Copy the `.env.example` to `.env` and populate with your Postgres db connection details etc.
 ```bash
-// .env file
+# .env file
 POSTGRES_PRISMA_URL="postgres://default:{{password}}@{{host}}/{{databaseName}}?pgbouncer=true&connect_timeout=15&sslmode=require"
 ```
 
@@ -24,9 +24,10 @@ yarn test
 
 To setup and run playwright e2e and api tests
 ```bash
-yarn test:e2e:install // This only needs to be run once
+# ensure your .e2e.env is pointing to the correct environment
+yarn test:e2e:install # This only needs to be run once
 yarn test:e2e:ui
-// or
+# or for CLI only
 yarn test:e2e
 ```
 
@@ -83,7 +84,7 @@ For more information on Prisma migrations, visit the [Prisma documentation](http
 - [x] Implement view Books display
 - [x] Setup unit testing
 - [x] Error handling when serverside data fails to load
-- [ ] E2E test for homepage with books
+- [x] E2E test for homepage with books
 - [ ] Implement view Book display with reviews visible
 - [ ] Implement adding a book 
    - Validate book name and author aren't empty, and don't already exist.

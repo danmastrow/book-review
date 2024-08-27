@@ -19,7 +19,10 @@ const BookPreview: React.FC<BookPreviewProps> = ({ book }) => {
       book.reviews.length || 0;
 
   return (
-    <li className="col-span-1 flex w-56 cursor-pointer flex-col divide-y divide-gray-200 rounded border bg-white text-center shadow-sm transition-all duration-200 hover:scale-110 hover:drop-shadow-lg lg:-mx-12 lg:shadow-none">
+    <li
+      className="col-span-1 flex w-56 cursor-pointer flex-col divide-y divide-gray-200 rounded border bg-white text-center shadow-sm transition-all duration-200 hover:scale-110 hover:drop-shadow-lg lg:-mx-12 lg:shadow-none"
+      data-testid="book-preview"
+    >
       <div className="flex flex-1 flex-col gap-y-0 p-8">
         <PhotoIcon className="mx-auto my-2 size-32 text-gray-200" />
         <h3 className="my-1 line-clamp-1 overflow-hidden text-sm font-medium text-gray-900">
