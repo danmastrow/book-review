@@ -17,7 +17,12 @@ yarn install
 yarn dev
 ```
 
-To setup and run playwright
+For unit tests (Vitest)
+```bash
+yarn test
+```
+
+To setup and run playwright e2e and api tests
 ```bash
 yarn test:e2e:install // This only needs to be run once
 yarn test:e2e:ui
@@ -60,12 +65,14 @@ For more information on Prisma migrations, visit the [Prisma documentation](http
 - Tech Stack
     - Next.js for frontend and API
     - Playwright for e2e and api tests
+    - Vitest for unit testing
     - Tailwind CSS for styling
     - Tailwind UI components for UX
     - Eslint for linting
     - Prisma for db migrations and ORM 
 - Using vercel for deployment and hosting of Next.js app
 - Postgres db setup and hosted by Vercel
+- Unit testing server components avoided -> https://nextjs.org/docs/app/building-your-application/testing#async-server-components
 
 ## TODO
 - [x] Initialize repo + deployment to vercel
@@ -74,6 +81,9 @@ For more information on Prisma migrations, visit the [Prisma documentation](http
 - [x] Design initial schema
 - [x] Design intial UX and APIs needed
 - [x] Implement view Books display
+- [ ] Setup unit testing
+- [ ] Error handling when serverside data fails to load
+- [ ] E2E test for homepage with books
 - [ ] Implement view Book display with reviews visible
 - [ ] Implement adding a book 
    - Validate book name and author aren't empty, and don't already exist.
