@@ -1,9 +1,14 @@
 import prisma from "@/db/db";
 import { notFound } from "next/navigation";
 import RatingStars from "@/app/components/rating-stars";
-import { PhotoIcon, UserCircleIcon } from "@heroicons/react/24/outline";
+import {
+  PhotoIcon,
+  PlusIcon,
+  UserCircleIcon,
+} from "@heroicons/react/24/outline";
 import { cn } from "@/util/cn";
 import { Metadata } from "next";
+import { Button } from "@/app/components/ui/button";
 
 interface BookPageProps {
   params: {
@@ -50,12 +55,22 @@ export default async function BookPage({ params }: BookPageProps) {
     <div className="mx-auto max-w-4xl px-4 py-8">
       <div className="mx-auto flex max-w-md flex-col items-center">
         <PhotoIcon className="my-2 size-32 text-gray-200" />
-        <h2 className="mb-4 text-3xl font-bold" data-testid="book-title">
+        <h2
+          className="mb-4 text-center text-3xl font-bold"
+          data-testid="book-title"
+        >
           {book.title}
         </h2>
         <h3 className="mb-4 max-w-sm text-center text-gray-500">
           By <span data-testid="book-author">{book.author}</span>
         </h3>
+        <p className="mb-4 max-w-sm text-left  text-sm font-light text-gray-600">
+          Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do
+          eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad
+          minim veniam, quis nostrud exercitation ullamco laboris nisi ut
+          aliquip ex ea commodo consequat...
+        </p>
+
         <div className="mb-4 flex items-center">
           <RatingStars rating={averageRating} />
           <span className="ml-2">
@@ -66,12 +81,17 @@ export default async function BookPage({ params }: BookPageProps) {
       </div>
 
       <div className="mx-auto my-4 max-w-md rounded p-4 shadow-md">
-        <h4 className="mb-4 text-2xl font-semibold">Reviews</h4>
+        <div className="flex flex-wrap items-center justify-between gap-2 pb-4 align-middle">
+          <h4 className="text-2xl font-semibold">Reviews</h4>
+          <Button className="w-auto" icon={<PlusIcon />}>
+            Add your review
+          </Button>
+        </div>
         {book.reviews.map((review, i) => (
           <div
             key={review.id}
             className={cn(
-              `border-b border-gray-200 mb-4 pb-4`,
+              `border-b border-gray-200 mb-4 pb-4 font-light`,
               i === book.reviews.length - 1 && "border-none mb-0 pb-2"
             )}
           >

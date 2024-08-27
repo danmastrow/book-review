@@ -1,5 +1,7 @@
 import prisma from "@/db/db";
-import BookPreview from "./components/book-preview";
+import BookPreview from "@/app/components/book-preview";
+import { Button } from "@/app/components/ui/button";
+import { PlusIcon } from "@heroicons/react/24/outline";
 
 export default async function BooksPage() {
   const books = await prisma.book.findMany({
@@ -11,10 +13,14 @@ export default async function BooksPage() {
   return (
     <>
       <header>
-        <div className="mb-4 max-w-3xl sm:px-6 lg:px-8">
-          <h1 className="text-3xl font-bold leading-tight tracking-tight text-gray-900">
-            Latest books
-          </h1>
+        <div className="mb-4 sm:px-6 lg:px-8">
+          <div className="flex justify-between">
+            <h1 className="text-3xl font-bold leading-tight tracking-tight text-gray-900">
+              Latest books
+            </h1>
+            <Button icon={<PlusIcon />}>Add new book</Button>
+          </div>
+
           <h2 className="text-sm text-gray-500">
             Discover the latest books that the community has added and reviewed.
           </h2>
