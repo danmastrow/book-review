@@ -1,9 +1,10 @@
 import prisma from "@/db/db";
-import { BookPreview } from "./components/book-preview";
+import BookPreview from "./components/book-preview";
 
 export default async function BooksPage() {
   const books = await prisma.book.findMany({
     include: { reviews: true },
+    orderBy: { createdAt: "desc" },
   });
 
   return (
