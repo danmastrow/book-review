@@ -72,15 +72,15 @@ For more information on Prisma migrations, visit the [Prisma documentation](http
 - [x] Setup postgres db and connection
 - [x] Setup Playwright e2e + api tests
 - [x] Design initial schema
-- [ ] Design intial UX and APIs needed
-- [ ] Implement view Books display
+- [x] Design intial UX and APIs needed
+- [x] Implement view Books display
 - [ ] Implement view Book display
 - [ ] Implement adding a book 
    - Validate book name and author aren't empty, and don't already exist.
 - [ ] Implement adding review/rating
    - Ensure a user can only review a book once
    - Validate that the review text is not empty and the rating is between 1 and 5
-- [ ] Ensure readme is updated
+- [ ] Ensure readme is updated, images, notes, todos local dev etc
 - [ ] Record loom and send off
 
 ## Out of scope
@@ -92,7 +92,8 @@ For more information on Prisma migrations, visit the [Prisma documentation](http
 - [x] User analytics, etc. PostHog, Google Analytics
 - [x] Multiple environment setup and infrastructure as code (etc. Terraform)
 - [x] CI/CD running tests, validation
-- [x] Favicons, branding etc
+- [x] Favicons, branding etc.
+- [x] Book API data, etc. Google books, or book images.
 
 
 ## Initial specification
