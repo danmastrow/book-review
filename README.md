@@ -81,8 +81,8 @@ For more information on Prisma migrations, visit the [Prisma documentation](http
 - [x] Design initial schema
 - [x] Design intial UX and APIs needed
 - [x] Implement view Books display
-- [ ] Setup unit testing
-- [ ] Error handling when serverside data fails to load
+- [x] Setup unit testing
+- [x] Error handling when serverside data fails to load
 - [ ] E2E test for homepage with books
 - [ ] Implement view Book display with reviews visible
 - [ ] Implement adding a book 

@@ -5,6 +5,7 @@ export default async function BooksPage() {
   const books = await prisma.book.findMany({
     include: { reviews: true },
     orderBy: { createdAt: "desc" },
+    take: 10, // Only get the 10 latest books
   });
 
   return (
