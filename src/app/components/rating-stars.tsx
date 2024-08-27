@@ -11,11 +11,8 @@ const RatingStars: React.FC<RatingStarsProps> = ({
   totalStars = 5,
 }) => {
   const roundedRating = Math.round(rating);
-  console.log(roundedRating);
   const filledStars = Math.min(roundedRating, totalStars);
-  console.log(filledStars);
   const emptyStars = totalStars - filledStars;
-  console.log(emptyStars);
 
   return (
     <dd className="flex items-center gap-x-1">
