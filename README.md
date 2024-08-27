@@ -74,12 +74,14 @@ For more information on Prisma migrations, visit the [Prisma documentation](http
 - [x] Design initial schema
 - [x] Design intial UX and APIs needed
 - [x] Implement view Books display
-- [ ] Implement view Book display
+- [ ] Implement view Book display with reviews visible
 - [ ] Implement adding a book 
    - Validate book name and author aren't empty, and don't already exist.
+   - Return user friendly error messages
 - [ ] Implement adding review/rating
    - Ensure a user can only review a book once
    - Validate that the review text is not empty and the rating is between 1 and 5
+   - Return user friendly error messages
 - [ ] Ensure readme is updated, images, notes, todos local dev etc
 - [ ] Record loom and send off
 

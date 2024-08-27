@@ -40,7 +40,7 @@ async function main() {
     const booksData = [
         {
             title: 'Long titled book with a really really really really long title, it can often happen with some books!',
-            author: 'Daniel Mastrowicz',
+            author: 'Dan Mastrow',
             reviews: [
                 { text: 'Great book, just needs a longer title to be 5 stars.', rating: 4, userId: 'user2' },
             ]
