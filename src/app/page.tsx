@@ -1,6 +1,6 @@
 import prisma from "@/db/db";
 import BookPreview from "@/app/components/book-preview";
-import { Button } from "@/app/components/ui/button";
+import { Button } from "@/app/components/design/button";
 import { PlusIcon } from "@heroicons/react/24/outline";
 
 export default async function BooksPage() {

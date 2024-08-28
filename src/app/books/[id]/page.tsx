@@ -1,14 +1,10 @@
 import prisma from "@/db/db";
 import { notFound } from "next/navigation";
 import RatingStars from "@/app/components/rating-stars";
-import {
-  PhotoIcon,
-  PlusIcon,
-  UserCircleIcon,
-} from "@heroicons/react/24/outline";
+import { PhotoIcon, UserCircleIcon } from "@heroicons/react/24/outline";
 import { cn } from "@/util/cn";
 import { Metadata } from "next";
-import { Button } from "@/app/components/ui/button";
+import ReviewForm from "@/app/components/review-form";
 
 interface BookPageProps {
   params: {
@@ -81,12 +77,7 @@ export default async function BookPage({ params }: BookPageProps) {
       </div>
 
       <div className="mx-auto my-4 max-w-md rounded p-4 shadow-md">
-        <div className="flex flex-wrap items-center justify-between gap-2 pb-4 align-middle">
-          <h4 className="text-2xl font-semibold">Reviews</h4>
-          <Button className="w-auto" icon={<PlusIcon />}>
-            Add your review
-          </Button>
-        </div>
+        <ReviewForm bookId={book.id} />
         {book.reviews.map((review, i) => (
           <div
             key={review.id}

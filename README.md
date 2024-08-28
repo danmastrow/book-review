@@ -87,12 +87,12 @@ For more information on Prisma migrations, visit the [Prisma documentation](http
 - [x] E2E test for homepage with books
 - [x] Implement view Book display with reviews visible
 - [ ] Implement adding a book 
-   - Validate book name and author aren't empty, and don't already exist.
+   - Validate book name and author aren't empty.
    - Return user friendly error messages
-- [ ] Implement adding review/rating
-   - Ensure a user can only review a book once
-   - Validate that the review text is not empty and the rating is between 1 and 5
-   - Return user friendly error messages
+- [x] Implement adding review/rating
+   - [x] Ensure a user can only review a book once
+   - [x] Validate that the review text is not empty and the rating is between 1 and 5
+   - [x] Return user friendly error messages
 - [ ] Ensure readme is updated, images, notes, todos local dev etc
 - [ ] Record loom and send off
 
@@ -109,6 +109,8 @@ For more information on Prisma migrations, visit the [Prisma documentation](http
 - [x] Book API data, etc. Google books, or book images.
 - [x] Pagination or search, currently restricted to displaying 10 latest books.
 - [x] Adding a book slug for the url, instead of just /{id}
+- [x] Using a proper form/validation library for UI validation. etc react hook form.
+- [x] Localization
 
 
 ## Initial specification
