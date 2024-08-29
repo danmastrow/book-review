@@ -6,12 +6,13 @@ import { cn } from "@/util/cn";
 import { Metadata } from "next";
 import ReviewForm from "@/app/components/review-form";
 
+export const dynamic = "force-dynamic";
+
 interface BookPageProps {
   params: {
     id: string;
   };
 }
-
 async function getBook(id: string) {
   const book = await prisma.book.findUnique({
     where: { id: parseInt(id) },

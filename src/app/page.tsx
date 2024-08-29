@@ -2,6 +2,7 @@ import prisma from "@/db/db";
 import BookPreview from "@/app/components/book-preview";
 import BookForm from "@/app/components/book-form";
 
+export const dynamic = "force-dynamic";
 export default async function BooksPage() {
   const books = await prisma.book.findMany({
     include: { reviews: true },

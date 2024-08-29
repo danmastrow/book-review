@@ -64,7 +64,7 @@ For more information on Prisma migrations, visit the [Prisma documentation](http
 
 ## Notes:
 - Tech Stack
-    - Next.js for frontend and API
+    - Next.js for frontend and API routes
     - Playwright for e2e and api tests
     - Vitest for unit testing
     - Tailwind CSS for styling
@@ -86,7 +86,7 @@ For more information on Prisma migrations, visit the [Prisma documentation](http
 - [x] Error handling when serverside data fails to load
 - [x] E2E test for homepage with books
 - [x] Implement view Book display with reviews visible
-- [ ] Implement adding a book 
+- [x] Implement adding a book 
    - Validate book name and author aren't empty.
    - Return user friendly error messages
 - [x] Implement adding review/rating
@@ -99,6 +99,7 @@ For more information on Prisma migrations, visit the [Prisma documentation](http
 ## Out of scope
 - [x] Add custom domain
 - [x] Setup git hooks
+- [x] Creating a seperate Node.js API, Express/NestJs etc (For this project I would go for the simpler option, with potential to refactor in the future, depending on requirements.)
 - [x] Local development Postgres SQL server setup (dockerized)
 - [x] User Authentication (will just mock anything representing a user for now)
 - [x] Logging/Alerting on errors (easy to setup in Vercel, or other cloud providers)
@@ -137,7 +138,6 @@ Create a small web application with the following components:
 ### Architecture Requirements:
 - Implement error handling and display user-friendly error messages
 - Ensure type safety across the stack using TypeScript
-
 
 ### API Tests:
 - Test that a book can be successfully created
