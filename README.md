@@ -61,7 +61,7 @@ This project uses Prisma for database management.
    npx prisma generate
    ```
 
-6. For local development run the seed script to add some demo data.
+6. For local development run the seed script to add some demo data, or to cleanup existing data.
    ```
    yarn seed
    ```
