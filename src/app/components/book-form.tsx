@@ -94,12 +94,12 @@ const BookForm = () => {
   return (
     <>
       <div className="mb-4 sm:px-6 lg:px-8">
-        <div className="flex justify-between">
+        <div className="flex justify-between flex-wrap">
           <h1 className="text-3xl font-bold leading-tight tracking-tight text-gray-900">
             Latest books
           </h1>
           <Button
-            className="ml-auto w-auto"
+            className="xs:ml-auto xs:mr-0 xs:my-0 my-2 mx-auto w-full max-w-md xs:w-auto"
             variant="primary"
             icon={<PlusIcon />}
             onClick={resetForm}
@@ -108,7 +108,7 @@ const BookForm = () => {
             Add new book
           </Button>
         </div>
-        <h2 className="text-sm text-gray-500">
+        <h2 className="text-sm text-gray-500 max-w-xs">
           Discover the latest books that the community has added and reviewed.
         </h2>
       </div>

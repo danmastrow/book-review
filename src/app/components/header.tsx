@@ -17,11 +17,6 @@ import { cn } from "@/util/cn";
 import Image from "next/image";
 import Link from "next/link";
 
-const user = {
-  name: "Dan Mastrow",
-  email: "dan@example.com",
-};
-
 const userNavigation = [
   { name: "Your Profile", href: "#" },
   { name: "Settings", href: "#" },
@@ -70,7 +65,7 @@ const Header = () => {
               </div>
               <MenuItems
                 transition
-                className="absolute right-0 z-10 mt-2 w-48 origin-top-right rounded-md bg-white py-1 shadow-lg ring-1 ring-black transition focus:outline-none data-[closed]:scale-95 data-[closed]:opacity-0 data-[enter]:duration-200 data-[leave]:duration-75 data-[enter]:ease-out data-[leave]:ease-in"
+                className="absolute right-0 z-10 mt-2 w-48 origin-top-right rounded-md bg-white py-1 shadow-lg ring-1 ring-gray-300 transition focus:outline-none data-[closed]:scale-95 data-[closed]:opacity-0 data-[enter]:duration-200 data-[leave]:duration-75 data-[enter]:ease-out data-[leave]:ease-in"
               >
                 {userNavigation.map((item) => (
                   <MenuItem key={item.name}>
@@ -106,8 +101,8 @@ const Header = () => {
       <DisclosurePanel className="sm:hidden">
         <div className="border-t border-gray-200 pb-3 pt-4">
           <div className="flex items-center px-4">
-            <div className="shrink-0">
-              <span className="mx-2">Demo User</span>
+            <div className="shrink-0 flex flex-col justify-start items-start align-middle">
+              <span>Demo User</span>
               <Image
                 alt=""
                 src="/dan.png"
@@ -115,14 +110,6 @@ const Header = () => {
                 height={40}
                 className="size-10 rounded-full"
               />
-            </div>
-            <div className="ml-3">
-              <div className="text-base font-medium text-gray-800">
-                {user.name}
-              </div>
-              <div className="text-sm font-medium text-gray-500">
-                {user.email}
-              </div>
             </div>
             <button
               type="button"
