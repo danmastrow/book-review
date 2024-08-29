@@ -90,12 +90,6 @@ const ReviewForm = ({ bookId }: ReviewFormProps) => {
       return;
     }
 
-    console.log("Submitting review", {
-      bookId,
-      rating: selectedRating,
-      review,
-    });
-
     await createReview(bookId, selectedRating, review);
   };
 

@@ -83,11 +83,6 @@ const BookForm = () => {
       return;
     }
 
-    console.log("Submitting book", {
-      title,
-      author,
-    });
-
     await createBook(title, author);
   };
 
