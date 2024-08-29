@@ -1,5 +1,11 @@
 # Book review
-[Live deployment on Vercel](https://book-review-sage.vercel.app)
+
+![preview](github/preview.png)
+
+![e2e](github/e2e.png)
+
+### [Live deployment on Vercel](https://book-review-sage.vercel.app)
+
 
 ## Getting Started
 
@@ -93,8 +99,7 @@ For more information on Prisma migrations, visit the [Prisma documentation](http
    - [x] Ensure a user can only review a book once
    - [x] Validate that the review text is not empty and the rating is between 1 and 5
    - [x] Return user friendly error messages
-- [ ] Ensure readme is updated, images, notes, todos local dev etc
-- [ ] Record loom and send off
+- [x] Ensure readme is updated, images, notes, todos local dev etc
 
 ## Out of scope
 - [x] Add custom domain

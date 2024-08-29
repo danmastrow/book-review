@@ -104,7 +104,7 @@ const ReviewForm = ({ bookId }: ReviewFormProps) => {
       <div className="flex flex-wrap items-center justify-between gap-2 pb-4 align-middle">
         <h4 className="text-2xl font-semibold">Reviews</h4>
         <Button
-          className="ml-auto w-auto"
+          className="ml-auto xs:w-auto w-full max-w-md"
           variant={showReviewForm ? "danger" : "primary"}
           icon={showReviewForm ? undefined : <PlusIcon />}
           onClick={resetForm}
