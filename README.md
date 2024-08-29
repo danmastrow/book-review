@@ -108,7 +108,7 @@ For more information on Prisma migrations, visit the [Prisma documentation](http
 - [x] CI/CD running tests, validation
 - [x] Favicons, branding etc.
 - [x] Book API data, etc. Google books, or book images.
-- [x] Pagination or search, currently restricted to displaying 10 latest books.
+- [x] Pagination or search, currently restricted to displaying 8 latest books.
 - [x] Adding a book slug for the url, instead of just /{id}
 - [x] Using a proper form/validation library for UI validation. etc react hook form.
 - [x] Localization
