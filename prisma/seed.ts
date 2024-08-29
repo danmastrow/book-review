@@ -41,6 +41,7 @@ async function main() {
         {
             title: 'Long titled book with a really really really really long title, it can often happen with some books!',
             author: 'Dan Mastrow',
+            userId: 'seedUser',
             reviews: [
                 { text: 'Great book, just needs a longer title to be 5 stars.', rating: 4, userId: 'user2' },
             ]
@@ -48,6 +49,7 @@ async function main() {
         {
             title: 'A long authors name',
             author: 'Daniel the 3rd, first to write a biography in his family and etc.',
+            userId: 'seedUser',
             reviews: [
                 { text: 'I didnt read it.', rating: 2, userId: 'user2' },
             ]
@@ -55,6 +57,7 @@ async function main() {
         {
             title: 'The Great Gatsby',
             author: 'F. Scott Fitzgerald',
+            userId: 'seedUser',
             reviews: [
                 { text: 'A classic that never gets old.', rating: 5, userId: 'user1' },
                 { text: 'Beautifully written, captivating story.', rating: 4, userId: 'user2' }
@@ -63,6 +66,7 @@ async function main() {
         {
             title: 'To Kill a Mockingbird',
             author: 'Harper Lee',
+            userId: 'seedUser',
             reviews: [
                 { text: 'Powerful and thought-provoking.', rating: 5, userId: 'user3' },
                 { text: 'A must-read for everyone.', rating: 5, userId: 'user4' }
@@ -72,6 +76,7 @@ async function main() {
         {
             title: 'Pride and Prejudice',
             author: 'Jane Austen',
+            userId: 'seedUser',
             reviews: [
                 { text: 'A delightful romance with witty dialogue.', rating: 4, userId: 'user2' },
                 { text: 'Austens best work, in my opinion.', rating: 5, userId: 'user3' },
@@ -82,13 +87,21 @@ async function main() {
         {
             title: '1984',
             author: 'George Orwell',
+            userId: 'seedUser',
             reviews: [
                 { text: 'Chillingly relevant even today.', rating: 3, userId: 'user1' },
                 { text: 'Theres nothing to worry about here...', rating: 1, userId: 'user2' },
                 { text: 'Not realistic, this would never happen!', rating: 1, userId: 'user5' }
             ]
         },
+        {
+            title: 'Some unreviewed book',
+            author: 'No one cares',
+            userId: 'seedUser',
+            reviews: []
+        },
     ]
+
     for (const bookData of booksData) {
         const { reviews, ...bookInfo } = bookData
         const createdBook = await prisma.book.create({

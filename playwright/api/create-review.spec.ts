@@ -3,13 +3,22 @@ import { test, expect } from '@playwright/test';
 
 test.describe('POST /api/reviews', () => {
     const apiUrl = '/api/reviews';
-    const mockUserId = 'testUser123';
+    const mockUserId = 'e2e-api-test-create-review';
+
+    test.afterEach(async () => {
+        await prisma.review.deleteMany({
+            where: {
+                userId: mockUserId
+            }
+        });
+    });
 
     test('successfully creates a new review', async ({ request }) => {
         const testBook = await prisma.book.create({
             data: {
                 title: 'Test Book',
                 author: 'Test Author',
+                userId: mockUserId
             }
         });
 
@@ -87,6 +96,7 @@ test.describe('POST /api/reviews', () => {
             data: {
                 title: 'Test Book',
                 author: 'Test Author',
+                userId: mockUserId
             }
         });
 

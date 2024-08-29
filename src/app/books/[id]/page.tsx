@@ -44,9 +44,10 @@ export default async function BookPage({ params }: BookPageProps) {
 
   const numberOfReviews = book.reviews.length;
   const averageRating =
-    book.reviews.reduce((acc, review) => acc + review.rating, 0) /
-    numberOfReviews;
-
+    numberOfReviews > 0
+      ? book.reviews.reduce((acc, review) => acc + (review.rating ?? 0), 0) /
+        numberOfReviews
+      : 0;
   return (
     <div className="mx-auto max-w-4xl px-4 py-8">
       <div className="mx-auto flex max-w-md flex-col items-center">
@@ -78,6 +79,11 @@ export default async function BookPage({ params }: BookPageProps) {
 
       <div className="mx-auto my-4 max-w-md rounded p-4 shadow-md">
         <ReviewForm bookId={book.id} />
+        {book.reviews.length === 0 && (
+          <p className="text-center text-gray-500">
+            No reviews yet, be the first to review this book!
+          </p>
+        )}
         {book.reviews.map((review, i) => (
           <div
             key={review.id}
@@ -88,7 +94,7 @@ export default async function BookPage({ params }: BookPageProps) {
           >
             <div className="mb-2 flex items-center">
               <RatingStars rating={review.rating} />
-              <span className="ml-2 font-semibold">Anonymous</span>
+              <span className="ml-2 font-semibold">{review.userId}</span>
               <UserCircleIcon className="ml-2 size-6" />
             </div>
             <p>{review.text}</p>

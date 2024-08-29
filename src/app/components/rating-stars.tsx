@@ -10,7 +10,7 @@ const RatingStars: React.FC<RatingStarsProps> = ({
   rating,
   totalStars = 5,
 }) => {
-  const roundedRating = Math.round(rating);
+  const roundedRating = Math.round(rating ?? 0);
   const filledStars = Math.min(roundedRating, totalStars);
   const emptyStars = totalStars - filledStars;
 

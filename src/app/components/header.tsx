@@ -57,6 +57,8 @@ const Header = () => {
                 <MenuButton className="relative flex max-w-xs items-center rounded-full bg-white text-sm focus:outline-none focus:ring-2 focus:ring-indigo-500 focus:ring-offset-2">
                   <span className="absolute -inset-1.5" />
                   <span className="sr-only">Open user menu</span>
+                  <span className="mx-2">Demo User</span>
+
                   <Image
                     alt=""
                     src="/dan.png"
@@ -105,6 +107,7 @@ const Header = () => {
         <div className="border-t border-gray-200 pb-3 pt-4">
           <div className="flex items-center px-4">
             <div className="shrink-0">
+              <span className="mx-2">Demo User</span>
               <Image
                 alt=""
                 src="/dan.png"

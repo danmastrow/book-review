@@ -22,11 +22,11 @@ export const Button: React.FC<ButtonProps> = ({
 
   const variantClasses = {
     primary:
-      "bg-indigo-600 text-white hover:bg-indigo-500 focus-visible:outline-indigo-600",
+      "bg-indigo-600 text-white hover:bg-indigo-500 focus-visible:outline-indigo-600 disabled:bg-gray-300 disabled:text-gray-900",
     secondary:
-      "bg-gray-200 text-gray-900 hover:bg-gray-300 focus-visible:outline-gray-600",
+      "bg-gray-200 text-gray-900 hover:bg-gray-300 focus-visible:outline-gray-600 disabled:bg-gray-300 disabled:text-gray-900",
     danger:
-      "bg-red-600 text-white hover:bg-red-500 focus-visible:outline-red-600",
+      "bg-red-600 text-white hover:bg-red-500 focus-visible:outline-red-600 disabled:bg-gray-300 disabled:text-gray-900",
   };
 
   const sizeClasses = {

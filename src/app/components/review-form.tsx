@@ -48,7 +48,7 @@ const ReviewForm = ({ bookId }: ReviewFormProps) => {
       setApiError("");
 
       const urlParams = new URLSearchParams(window.location.search);
-      const mockUserId = urlParams.get("mockUserId") ?? "demoUser";
+      const mockUserId = urlParams.get("mockUserId") ?? "Demo User";
 
       const response = await fetch("/api/reviews", {
         method: "POST",
@@ -143,7 +143,9 @@ const ReviewForm = ({ bookId }: ReviewFormProps) => {
               </p>
             )}
             {apiError && (
-              <p className="text-sm font-bold text-red-500">{apiError}</p>
+              <p className="text-sm font-bold text-red-500">
+                Error: {apiError}
+              </p>
             )}
 
             <Button className="ml-auto" type="submit" disabled={isLoading}>
